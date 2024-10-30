@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LogIn</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <br /> <br /> <br /> <br />
+    <main class="form-signin w-100 m-auto mt-5">
+        <form action="@Url.Action("LogIn","Acceso")" method="post">
+
+            <div style="text-align: center;">
+                <img class="mb-4" src="https://pic.onlinewebfonts.com/thumbnails/icons_301872.svg" alt="" width="72" height="57">
+                <h1 class="h3 mb-3 fw-normal">Iniciar Sesion</h1>
+            </div>
+
+            <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="correo">
+                <label for="floatingInput">Correo</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="clave">
+                <label for="floatingPassword">Clave</label>
+            </div>
+
+            <button class="btn btn-primary w-100 py-2" type="submit">Acceder</button>
+
+        </form>
+    </main>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
